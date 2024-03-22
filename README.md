@@ -11,7 +11,7 @@ The official implementation of the ["TetraSphere: A Neural Descriptor for O(3)-I
 
 
 ## Requirements
-To run the code, install the dependencies by running the following:
+To be able to run the code, install the dependencies by running the following:
 
 ```
 conda create -n tetrasphere
@@ -26,9 +26,9 @@ pip install tensorboardx pytorch_lightning torchmetrics datetime
 
 ## Datasets
 
-Inspect `config.py` to find the preset paths to the datasets, and edit if you like.
+Inspect `tetrasphere/config.py` to find the preset paths to the datasets, and edit if you like.
 
-- The datasets can be downloaded with the convenience application `download_datasets.py`
+- The datasets can be downloaded with the convenience application `tetrasphere/download_datasets.py`
 
 If you want to download them manually, simply use the links below.
 
@@ -45,6 +45,8 @@ However, as this dataset seems to be inaccessible through browsing the website, 
 
 
 ## Run
+
+To run the experiments, navigate to `tetrasphere/experiments`.
 
 Point cloud classification:
 
