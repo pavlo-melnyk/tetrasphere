@@ -32,7 +32,7 @@ Inspect `config.py` to find the preset paths to the datasets, and edit if you li
 
 If you want to download them manually, simply use the links below.
 
-ModelNet-40 can be downloaded ![here](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip).
+ModelNet-40 can be downloaded [here](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip).
 
 To acquire the ScanObjectNN dataset, download the file h5_files.zip from [here](http://hkust-vgd.github.io/scanobjectnn/h5_files.zip). 
 
