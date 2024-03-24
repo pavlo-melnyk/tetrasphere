@@ -32,34 +32,48 @@ Inspect `tetrasphere/config.py` to find the preset paths to the datasets, and ed
 
 If you want to download them manually, simply use the links below.
 
-ModelNet-40 can be downloaded [here](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip).
+- ModelNet-40 can be downloaded [here](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip).
 
-To acquire the ScanObjectNN dataset, download the file h5_files.zip from [here](http://hkust-vgd.github.io/scanobjectnn/h5_files.zip). 
+- To acquire the ScanObjectNN dataset, download the file h5_files.zip from [here](http://hkust-vgd.github.io/scanobjectnn/h5_files.zip). 
 
-(For reference, the download link was provided by the authors [here](https://github.com/hkust-vgd/scanobjectnn/issues/31).)
+  (For reference, the download link was provided by the authors [here](https://github.com/hkust-vgd/scanobjectnn/issues/31).)
 
-To get the ShapeNet-Part you should register on the shapenet.org webpage.
-However, as this dataset seems to be inaccessible through browsing the website, we found [this link](https://shapenet.cs.stanford.edu/media/shapenet_part_seg_hdf5_data.zip) in the github repos of multiple authors working on point cloud segmentation.
+- To get the ShapeNet-Part you should register on the shapenet.org webpage.
+
+  However, as this dataset seems to be inaccessible through browsing the website, we found [this link](https://shapenet.cs.stanford.edu/media/shapenet_part_seg_hdf5_data.zip) in the GitHub repos of multiple authors working on point cloud segmentation.
 
 
 
 
 ## Run
 
-To run the experiments, navigate to `tetrasphere/experiments`.
+To run the experiments, navigate to `tetrasphere/experiments/`.
 
-Point cloud classification:
+- Point cloud classification:
 
-`python train_mn40.py` - ModelNet40
+  `python train_mn40.py` - ModelNet40
 
-`python train_objbg.py` - ScanObjectNN, `objbg` variant
+  `python train_objbg.py` - ScanObjectNN, `objbg` variant
 
-`python train_pbt50rs.py` - ScanObjectNN, `pb-t50-rs` variant
+  `python train_pbt50rs.py` - ScanObjectNN, `pb-t50-rs` variant
 
-Part segmentation:
+- Part segmentation:
 
-`python train_partseg.py`
+  `python train_partseg.py`
 
+- Pretrained weights for the four experiments are included in the `weights/` directory.
+  To test these, run
+
+  `python evaluate_all.py`
  
+
+### Note
+
+Due to the default usage of `float32` with `torch`, the pairwise distances in the point clouds might slightly (by up to 10^-5) differ when the point cloud is rotated (especially in the case of the corrupted real data from `pb-t50-rs`).
+
+Thus, the `knn` function as the part of the baseline (VN-)DGCNN *sometimes* returns different nearest neighbors for a rotated input, which technically breaks rotation-equivariance within the VN layers in the network.
+
+Changing the precision to `float64` rectifies this in most cases.
+However, since the original training was conducted with `float32`, *in rare cases* the accuracy of TetraSphere and the baseline may insignificantly vary depending on the input orientation (by up to 0.1% accuracy).
 
 
