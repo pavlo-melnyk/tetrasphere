@@ -71,11 +71,11 @@ To run the experiments, navigate to `tetrasphere/experiments/`.
 
 ### Note
 
-Due to the default usage of `float32` with `torch`, the pairwise distances in the point clouds might slightly (by up to 10^-5) differ when the point cloud is rotated (especially in the case of the corrupted real data from `pb-t50-rs`).
+Due to the default usage of `float32` with `torch`, the pairwise distances in the point clouds might slightly (by up to $10^{-5}$) differ when the point cloud is rotated (especially in the case of the corrupted real data from `pb-t50-rs`).
 
 Thus, the `knn` function as the part of the baseline (VN-)DGCNN *sometimes* returns different nearest neighbors for a rotated input, which technically breaks rotation-equivariance within the VN layers in the network.
 
 Changing the precision to `float64` rectifies this in most cases.
-However, since the original training was conducted with `float32`, *in rare cases* the accuracy of TetraSphere and the baseline may insignificantly vary depending on the input orientation (by up to 0.1% accuracy).
+However, since the original training was conducted with `float32`, *in rare cases* the accuracy of TetraSphere and the baseline may insignificantly vary depending on the input orientation (by up to $0.1\\%$ accuracy).
 
 
