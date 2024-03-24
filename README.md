@@ -28,18 +28,20 @@ pip install tensorboardx pytorch_lightning torchmetrics datetime
 
 Inspect `tetrasphere/config.py` to find the preset paths to the datasets, and edit if you like.
 
-- The datasets can be downloaded with the convenience application `tetrasphere/download_datasets.py`
+- The datasets can be downloaded with a convenience application:
+    ```
+    cd tetrasphere
+    python download_datasets.py
+    ```
 
 If you want to download them manually, simply use the links below.
 
 - ModelNet-40 can be downloaded [here](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip).
 
 - To acquire the ScanObjectNN dataset, download the file h5_files.zip from [here](http://hkust-vgd.github.io/scanobjectnn/h5_files.zip). 
-
   (For reference, the download link was provided by the authors [here](https://github.com/hkust-vgd/scanobjectnn/issues/31).)
 
-- To get the ShapeNet-Part you should register on the shapenet.org webpage.
-
+- To get the ShapeNet-Part you should register on the shapenet.org webpage. 
   However, as this dataset seems to be inaccessible through browsing the website, we found [this link](https://shapenet.cs.stanford.edu/media/shapenet_part_seg_hdf5_data.zip) in the GitHub repos of multiple authors working on point cloud segmentation.
 
 
