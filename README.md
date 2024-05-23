@@ -1,6 +1,6 @@
 # TetraSphere: A Neural Descriptor for O(3)-Invariant Point Cloud Analysis
 
-The official implementation of the ["TetraSphere: A Neural Descriptor for O(3)-Invariant Point Cloud Analysis"](https://arxiv.org/abs/2211.14456) paper, accepted to CVPR 2024
+The official implementation of the ["TetraSphere: A Neural Descriptor for O(3)-Invariant Point Cloud Analysis"](https://arxiv.org/abs/2211.14456) paper, accepted at CVPR 2024
 
 [[arXiv]](https://arxiv.org/abs/2211.14456) [[video]](https://www.youtube.com/watch?v=MRJr0V7eMj8&ab_channel=PavloO.Melnyk)
 
