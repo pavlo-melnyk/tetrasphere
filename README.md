@@ -2,7 +2,7 @@
 
 The official implementation of the ["TetraSphere: A Neural Descriptor for O(3)-Invariant Point Cloud Analysis"](https://arxiv.org/abs/2211.14456) paper, accepted at CVPR 2024
 
-[[arXiv]](https://arxiv.org/abs/2211.14456) [[video]](https://www.youtube.com/watch?v=MRJr0V7eMj8&ab_channel=PavloO.Melnyk)
+[[arXiv]](https://arxiv.org/abs/2211.14456) [[video]](https://www.youtube.com/watch?v=MRJr0V7eMj8&ab_channel=PavloO.Melnyk) [[bibtex]](https://github.com/pavlo-melnyk/tetrasphere#Citation)
 
 
 ## Teaser
@@ -77,5 +77,18 @@ Thus, the `knn` function as the part of the baseline (VN-)DGCNN *sometimes* retu
 
 Changing the precision to `float64` rectifies this in most cases.
 However, since the original training was conducted with `float32`, *in rare cases* the accuracy of TetraSphere and the baseline may insignificantly vary depending on the input orientation (by up to $0.1\\%$ accuracy).
+
+## Citation
+Please cite if you find the code/paper useful:
+```
+@InProceedings{Melnyk_2024_CVPR,
+    author    = {Melnyk, Pavlo and Robinson, Andreas and Felsberg, Michael and Wadenb\"ack, M\r{a}rten},
+    title     = {TetraSphere: A Neural Descriptor for O(3)-Invariant Point Cloud Analysis},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {5620-5630}
+}
+```
 
 
